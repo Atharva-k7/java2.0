@@ -15,7 +15,6 @@ public class substring {
             HashSet<Character>read=new HashSet<>();
             int maxlen=0;
             int left =0;
-
             for(int right=0;right<s.length();right++){
                                                         //            if the duplicate character found then
                                                         //            1.remove the left pointer char
