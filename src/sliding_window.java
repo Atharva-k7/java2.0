@@ -20,6 +20,5 @@ public class sliding_window {
         }
         System.out.print("}");
         System.out.println("second loop"+maxsum);
-
     }
 }
