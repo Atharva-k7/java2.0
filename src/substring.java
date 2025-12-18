@@ -25,7 +25,6 @@ public class substring {
                 }
                                                         //            3.add rigth char in hashset
                 read.add(s.charAt(right));
-
                 maxlen=Math.max(maxlen,right-left+1);
             }
             return maxlen;
