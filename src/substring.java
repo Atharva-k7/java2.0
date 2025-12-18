@@ -4,11 +4,9 @@ import java.util.LinkedList;
 public class substring {
     public static void main(String[] args) {
                                                         //        abcbdcdcd
-                                      //        then b remove ab
-                                                        //        then add d then c in
+                                                        //        then b remove ab
+                                                         //        then add d then c in
                                                         //        so  remove the c from back
-
-
         System.out.println( logeststring("atharvakadam"));
     }
         public static int logeststring(String s){
