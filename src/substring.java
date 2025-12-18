@@ -27,7 +27,6 @@ public class substring {
                 read.add(s.charAt(right));
 
                 maxlen=Math.max(maxlen,right-left+1);
-
             }
             return maxlen;
     }
