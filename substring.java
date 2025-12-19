@@ -5,7 +5,7 @@ public class substring {
     public static void main(String[] args) {
                                                         //        abcbdcdcd
                                                         //        then b remove ab
-                                                        //        then add d then c in
+                                                         //        then add d then c in
                                                         //        so  remove the c from back
         System.out.println( logeststring("atharvakadam"));
     }
