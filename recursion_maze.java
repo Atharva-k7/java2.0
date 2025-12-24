@@ -12,7 +12,7 @@ public class recursion_maze {
      if (i==n-1&&j==m-1){
          return 1;
      }
-       int path_right_total=path_count(i+1,j,n,m);
+     int path_right_total=path_count(i+1,j,n,m);
       int path_down_total=path_count(i,j+1,n,m);
  return path_down_total+path_right_total;
 
