@@ -4,7 +4,7 @@ public class permString {
     static void main(String[] args) {
         permStr("abc","");
     }
-
+// time complexity is o(n!)    n(n-1) n(n-2)....
   public static void permStr(String s,String permutation) {
 int j=0;
         if (s.length()==0){
