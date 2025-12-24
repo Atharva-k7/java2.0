@@ -10,7 +10,6 @@ public class StringBuilder123 {
        sb.insert(7,"ravindra");
       sb.append(" ");
       System.out.println(sb);
-
-    }
+   }
 
 }
