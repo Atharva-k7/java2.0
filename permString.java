@@ -11,8 +11,6 @@ int j=0;
             System.out.println(permutation);
             return;
         }
-
-
         for (int i = 0; i <s.length() ; i++) {
           char currCHAR=s.charAt(i);
 
