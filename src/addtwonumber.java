@@ -1,4 +1,4 @@
-class LL {
+class LiL{
     Node head;
     class Node{
         int data;
@@ -23,8 +23,8 @@ class LL {
         currNode.next=newNode;
 
     }
-    public static LL addTwoLists(LL l1, LL l2) {
-        LL result = new LL();
+    public static LiL addTwoLists(LiL l1, LiL l2) {
+        LiL result = new LiL();
         Node n1 = l1.head;
         Node n2 = l2.head;
 
@@ -47,39 +47,8 @@ class LL {
 
         return result;
     }
-
-
-    // add at first place head
-    public void addfirst(int data){
-       Node newNode=new Node(data);
-       // if  no head means no linked list is present
-       if(head == null){
-           head=newNode;
-        }else {
-           newNode.next=head;
-           head=newNode;
-       }
-    }
-
-    public void addtolist(int data){
-        Node newNode=new Node(data);
-        if(head == null){
-           head=newNode;
-        }else {
-            Node currNode = head;
-            while (currNode.next != null) {
-                currNode = currNode.next;
-            }
-            currNode.next = newNode;
-
-            newNode.next=null;
-        }
-
-
-    }
-
     public void traversprint(){
-        Node currNode=head;
+        LiL.Node currNode=head;
         while(currNode!=null){
             System.out.print(currNode.data+"->");
             currNode=currNode.next;
@@ -87,21 +56,17 @@ class LL {
         System.out.print("null");
     }
 
-     public static void main(String[] args) {
-        LL l1=new LL();
-        LL l2=new LL();
+   public static void main(String[] args) {
+        LiL l1=new LiL();
+        LiL l2=new LiL();
+
         l1.addLast(1);
-         l1.addLast(2);
-         l1.addLast(3);
+       l1.addLast(2);
+       l1.addLast(3);
 
-         l2.addLast(4);
-         l2.addLast(5);
-         l2.addLast(6);
-         l1.traversprint();
+       l2.addLast(3);
+       l2.addLast(2);
+       l2.addLast(1);
 
-         System.out.println("----------------");
-         addTwoLists(l1,l2).traversprint();
-
-    }
-
-}
+        addTwoLists(l1,l2).traversprint();
+    }}
