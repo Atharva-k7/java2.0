@@ -1,5 +1,5 @@
 class LiL{
-    Node head;
+    Node head=null;
     class Node{
         int data;
         Node next;
@@ -53,7 +53,7 @@ class LiL{
             System.out.print(currNode.data+"->");
             currNode=currNode.next;
         }
-        System.out.print("null");
+
     }
 
    public static void main(String[] args) {
@@ -68,5 +68,15 @@ class LiL{
        l2.addLast(2);
        l2.addLast(1);
 
-        addTwoLists(l1,l2).traversprint();
+
+
+
+
+
+
+
+
+
+
+       l1.traversprint();
     }}
