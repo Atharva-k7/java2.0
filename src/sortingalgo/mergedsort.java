@@ -1,6 +1,7 @@
 package sortingalgo;
 
 public class mergedsort {
+    //o(n)
     public static void divide(int arr[],int si,int ei){
         // This func will divide the arr in two not actually divede but maps
 if(si>=ei){
@@ -15,6 +16,7 @@ if(si>=ei){
 
         conquere(arr,si,mid,ei);
     }
+    //o(logn)
     public static void conquere(int arr[],int si,int mid,int ei){
 
         int merged[]=new int[ei-si+1];  //we need an extra space to save elemnst {}
@@ -47,15 +49,14 @@ if(si>=ei){
 
         }
     }
-
-   public static void main(String[] args) {
+    public static void main(String[] args) {
         int arr[]={4,1,3,2,5};
         //this will give the ending index as lenght is from is -1
         int n= arr.length-1;
 
 
         divide(arr,0,n);//runs function
-        for (int num:arr){//loops print main array 
+        for (int num:arr){//loops print main array
             System.out.print(num+",");
         }
 
