@@ -68,15 +68,5 @@ class LiL{
        l2.addLast(2);
        l2.addLast(1);
 
-
-
-
-
-
-
-
-
-
-
        l1.traversprint();
     }}

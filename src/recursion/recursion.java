@@ -1,3 +1,5 @@
+package recursion;
+
 public class recursion {
     static void main(String[] args) {
         System.out.println(factorial(5));

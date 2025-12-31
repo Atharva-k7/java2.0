@@ -1,3 +1,5 @@
+package recursion;
+
 public class placements_tiles {
     static void main(String[] args) {
         System.out.println(placement(4,2));

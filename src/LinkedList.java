@@ -3,10 +3,11 @@ class LL {
     class Node{
         int data;
         Node next;
-
+        Node prev;
         Node(int data){
             this.data= data;
             this.next=null;
+            this.prev=null;
         }
     }
 
@@ -21,7 +22,7 @@ class LL {
             currNode=currNode.next;
         }
         currNode.next=newNode;
-
+        newNode.prev=currNode;
     }
     public static LL addTwoLists(LL l1, LL l2) {
         LL result = new LL();
@@ -86,6 +87,18 @@ class LL {
         }
         System.out.print("null");
     }
+    public void revtraversprint(){
+
+        Node currNode=head;
+        while(currNode.next!=null){
+            currNode=currNode.next;
+        }
+        while (currNode!=null){
+            System.out.print(currNode.data+"-");
+            currNode=currNode.prev;
+        }
+        System.out.print("null");
+    }
 
      public static void main(String[] args) {
         LL l1=new LL();
@@ -97,11 +110,12 @@ class LL {
          l2.addLast(4);
          l2.addLast(5);
          l2.addLast(6);
-         l1.traversprint();
 
-         System.out.println("----------------");
-         addTwoLists(l1,l2).traversprint();
 
+//         System.out.println("----------------");
+//         addTwoLists(l1,l2).traversprint();
+//         System.out.println("-----");
+         l1.revtraversprint();
     }
 
 }
