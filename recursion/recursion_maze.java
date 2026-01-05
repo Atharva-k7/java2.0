@@ -1,3 +1,5 @@
+package recursion;
+
 public class recursion_maze {
     static void main(String[] args) {
 
