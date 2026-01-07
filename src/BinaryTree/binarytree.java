@@ -1,6 +1,5 @@
 package BinaryTree;
 
-import java.lang.reflect.Array;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -18,9 +17,9 @@ public class binarytree {
     }
 
     static class BinaryTree {
-        static int idx = -1;
+        int idx = -1;
 
-        public static   Node buildtree(int node[]) {
+        public   Node buildtree(int node[]) {
             idx++;
             if (node[idx] == -1) {
                 return null;
@@ -122,20 +121,51 @@ public class binarytree {
     }
     public static int  diameterofTree(Node root){
 
+            if (root == null) return 0;
+            int leftHeight = heightofTree(root.left);
+            int rightHeight = heightofTree(root.right);
+            int selfDiameter = leftHeight + rightHeight + 1;
 
-                if(root== null){
-                    return 0;
-                }
-                int a=Math.max(heightofTree(root.left),heightofTree(root.left.right));
-                int b=Math.max(heightofTree(root.right),heightofTree(root.right.left));
-                int total=a+b+1;
-                return total;
+            int leftDiameter = diameterofTree(root.left);
+            int rightDiameter = diameterofTree(root.right);
+
+            return Math.max(selfDiameter, Math.max(leftDiameter, rightDiameter));
+        }
+
+            public static boolean subtree(Node root,Node subroot){
+            if(subroot==null){
+                return true;
             }
-            public static void main(String[] args) {
-            int node[] = {1, 2, 4,-1, -1,5,-1,7,-1,-1,3,-1,6,-1,-1};
+            if(root==null){
+                return false;
+            }
+            if(root.data==subroot.data){
+                if(identifying(root,subroot)){
+                    return true;
+                }
 
+            }
+            return subtree(root.right,subroot)||subtree(root.left,subroot);
+            }
+public static boolean identifying(Node root, Node subroot){
+        if(root==null&&subroot==null){
+            return true;
+        }
+        if(root==null||subroot==null){
+            return false;
+        }
+        if(root.data==subroot.data){
+            return identifying(root.left,subroot.left)&&identifying(root.right,subroot.right);
+    }
+        return false;
+    }
+            public static void main(String[] args) {
+                int node[] = {3,4,1,-1,-1,2,0,-1,-1,-1,5,-1,-1};
+                int subnode[] = {4,1,-1,-1,2,-1,-1};
             BinaryTree t1 = new BinaryTree();
+            BinaryTree t2=new BinaryTree();
             Node root=t1.buildtree(node);
-         
+            Node subroot=t2.buildtree(subnode);
+                System.out.println(subtree(root,subroot));
         }
     }
