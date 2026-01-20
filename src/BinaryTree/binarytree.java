@@ -3,7 +3,7 @@ package BinaryTree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class binarytree {
+public class  binarytree {
     static class Node {
         int data;
         Node left;
@@ -149,8 +149,7 @@ public class binarytree {
             }
 public static boolean identifying(Node root, Node subroot){
         if(root==null&&subroot==null){
-            return true;
-        }
+            return true;}
         if(root==null||subroot==null){
             return false;
         }
