@@ -1,5 +1,7 @@
 package BinaryTree;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.SortedMap;
 
  public class BinarySearchTree {
@@ -64,6 +66,60 @@ import java.util.SortedMap;
             return seacrhBSt(root.right,key);
         }
     }
+     public static void levelorder(Node root){
+         if(root==null){
+             return;
+         }
+         Queue<Node> q=new LinkedList<>();
+         q.add(root);
+         q.add(null);
+
+         while(!q.isEmpty()){
+           Node currnode=q.remove();
+
+             if(currnode==null){
+                 System.out.println();
+                 if(q.isEmpty()){
+                     break;
+                 }else{
+                     q.add(null);
+                 }
+             }else{
+                 System.out.print(currnode.value+" ");
+                 if(currnode.left!=null){
+                     q.add(currnode.left);
+                 }
+                 if (currnode.right!=null){
+                     q.add(currnode.right);
+                 }
+             }
+         }
+     }
+     public static void inorderbst(Node root){
+       if(root==null){
+           return;
+       }
+       Queue<Node>q=new LinkedList<>();
+        q.add(root);
+        q.add(null);
+
+        while(!q.isEmpty()){
+            Node currnode= q.remove();
+            if(currnode==null){
+                System.out.println();
+
+            if(q.isEmpty()){
+                break;
+            }
+            else{
+                q.add(null);
+            }
+            
+        }
+
+     }
+
+   }
 
         static void main(String[] args) {
             int[] values = {8,5,3,1,4,6,10,11,14};
@@ -75,12 +131,8 @@ import java.util.SortedMap;
             }
             inorder(root);
             System.out.println();
-            if(seacrhBSt(root,1)){
-                System.out.println("found it ride it ");
-            }else {
-                System.out.println("we are very sorry hes dead");
-            }
 
+            levelorder(root);
 
         }
 
