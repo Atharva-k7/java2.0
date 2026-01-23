@@ -149,8 +149,7 @@ public class  binarytree {
             }
 public static boolean identifying(Node root, Node subroot){
         if(root==null&&subroot==null){
-            return true;
-        }
+            return true;}
         if(root==null||subroot==null){
             return false;
         }
