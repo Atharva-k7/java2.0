@@ -1,6 +1,6 @@
 import java.util.Arrays;
-
-public class presum {
+package
+ class presum {
     public static void main(String[] args) {
         int[] arr ={1,5,4,8,6,9};
         System.out.println( Arrays.toString( prefix_sum(arr)));
